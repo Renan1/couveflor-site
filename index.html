@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Couve Flor | Restaurante Corporativo em Juiz de Fora - MG</title>
+<meta name="description" content="Couve Flor Refeições: restaurante corporativo em Juiz de Fora - MG. Desjejum, almoço, jantar, marmitex e entregas corporativas com qualidade desde 2015.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green: #23a889;
+    --green-deep: #16694f;
+    --mint: #56f5d0;
+    --mint-tint: #eafbf6;
+    --orange: #f5641b;
+    --orange-deep: #d5490a;
+    --cream: #fbf7ea;
+    --cream-deep: #f3ecd8;
+    --floret: #fffad0;
+    --ink: #16261f;
+    --ink-soft: #3c4a44;
+    --gray: #747474;
+    --white: #ffffff;
+    --radius-lg: 28px;
+    --radius-md: 18px;
+    --shadow: 0 20px 50px -20px rgba(22,38,31,0.25);
+    --container: 1180px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  .wrap{max-width:var(--container); margin:0 auto; padding:0 32px;}
+  .eyebrow{
+    font-family:'Space Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--green-deep);
+    font-weight:700;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:22px; height:2px;
+    background:var(--orange);
+    display:inline-block;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    line-height:1.1;
+    color:var(--ink);
+    letter-spacing:-0.01em;
+  }
+  h2{font-size:clamp(28px,4vw,42px); margin-bottom:16px;}
+  p{color:var(--ink-soft);}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:15px 28px;
+    border-radius:100px;
+    font-family:'Inter',sans-serif;
+    font-weight:700;
+    font-size:15px;
+    cursor:pointer;
+    border:2px solid transparent;
+    transition:transform .18s ease, box-shadow .18s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--orange); color:var(--white); box-shadow:0 12px 24px -10px rgba(245,100,27,0.55);}
+  .btn-primary:hover{background:var(--orange-deep);}
+  .btn-outline{border-color:var(--ink); color:var(--ink); background:transparent;}
+  .btn-outline:hover{background:var(--ink); color:var(--cream);}
+  .btn-light{background:var(--white); color:var(--green-deep); box-shadow:0 12px 24px -10px rgba(22,38,31,0.25);}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(251,247,234,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(22,38,31,0.08);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 32px;
+    max-width:var(--container); margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand img{width:42px; height:42px;}
+  .brand span{font-family:'Fraunces',serif; font-weight:700; font-size:21px;}
+  .nav-links{display:flex; align-items:center; gap:34px;}
+  .nav-links a{font-size:14.5px; font-weight:600; color:var(--ink-soft); transition:color .15s;}
+  .nav-links a:hover{color:var(--green-deep);}
+  .nav-cta{display:flex; align-items:center; gap:18px;}
+  .burger{display:none; background:none; border:none; cursor:pointer;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:76px 0 40px;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:40px;
+    align-items:center;
+  }
+  .hero h1{font-size:clamp(36px,5vw,58px); margin:20px 0 22px;}
+  .hero h1 em{font-style:normal; color:var(--green);}
+  .hero p.lead{font-size:18px; max-width:480px; margin-bottom:32px;}
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:36px;}
+  .hero-badges{display:flex; gap:28px; flex-wrap:wrap;}
+  .hero-badge{display:flex; align-items:center; gap:10px;}
+  .hero-badge .num{font-family:'Fraunces',serif; font-weight:700; font-size:22px; color:var(--green-deep);}
+  .hero-badge .lbl{font-size:12.5px; color:var(--gray); max-width:110px; line-height:1.25;}
+
+  .hero-art{position:relative; display:flex; justify-content:center; align-items:center; min-height:420px;}
+  .blob{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+  }
+  .hero-logo-frame{
+    position:relative; z-index:2;
+    width:340px; height:340px;
+    background:var(--green);
+    border-radius:38% 62% 60% 40% / 46% 40% 60% 54%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:var(--shadow);
+    animation:morph 12s ease-in-out infinite;
+  }
+  @keyframes morph{
+    0%,100%{border-radius:38% 62% 60% 40% / 46% 40% 60% 54%;}
+    50%{border-radius:58% 42% 38% 62% / 54% 62% 38% 46%;}
+  }
+  .hero-logo-frame img{width:62%; filter:brightness(0) invert(1);}
+  .float-card{
+    position:absolute;
+    background:var(--white);
+    border-radius:16px;
+    padding:14px 18px;
+    box-shadow:var(--shadow);
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    z-index:3;
+    display:flex; align-items:center; gap:10px;
+  }
+  .float-card .dot{width:9px; height:9px; border-radius:50%; background:var(--orange);}
+  .float-card.c1{top:10px; left:-10px;}
+  .float-card.c2{bottom:26px; right:-18px;}
+  @media (prefers-reduced-motion: reduce){ .hero-logo-frame{animation:none;} }
+
+  .scallop{
+    display:block; width:100%; height:46px; margin-top:-1px;
+  }
+
+  /* ---------- STATS STRIP ---------- */
+  .stats{
+    background:var(--ink);
+    padding:44px 0;
+  }
+  .stats .wrap{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+  }
+  .stat{text-align:center; color:var(--cream);}
+  .stat .n{font-family:'Fraunces',serif; font-size:clamp(26px,3vw,38px); color:var(--mint); font-weight:600;}
+  .stat .l{font-family:'Space Mono',monospace; font-size:11.5px; letter-spacing:0.06em; text-transform:uppercase; color:#b9c4bf; margin-top:6px;}
+
+  /* ---------- SOBRE ---------- */
+  .section{padding:96px 0;}
+  .about{background:var(--cream);}
+  .about-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:64px;
+    align-items:center;
+  }
+  .about-art{position:relative;}
+  .scallop-frame{
+    position:relative;
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    aspect-ratio:4/5;
+    background:linear-gradient(155deg,var(--green) 0%, var(--green-deep) 100%);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .scallop-frame img{width:56%; opacity:.95;}
+  .scallop-frame.photo-frame{background:var(--green-deep);}
+  .scallop-frame.photo-frame img{width:100%; height:100%; object-fit:cover; opacity:1;}
+  .about-badge{
+    position:absolute; bottom:-22px; left:-22px;
+    background:var(--floret);
+    border:2.5px solid var(--ink);
+    border-radius:50%;
+    width:118px; height:118px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; transform:rotate(-8deg);
+  }
+  .about-badge b{font-family:'Fraunces',serif; font-size:22px;}
+  .about-badge span{font-family:'Space Mono',monospace; font-size:9.5px; letter-spacing:.05em;}
+  .about-body p{font-size:16.5px; margin-bottom:18px;}
+  .about-list{display:flex; flex-direction:column; gap:14px; margin:26px 0 30px;}
+  .about-list li{display:flex; gap:12px; align-items:flex-start; font-weight:600; font-size:15px; color:var(--ink);}
+  .about-list svg{flex-shrink:0; margin-top:2px;}
+
+  /* ---------- SERVICOS ---------- */
+  .services{background:var(--mint-tint);}
+  .section-head{max-width:640px; margin-bottom:52px;}
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .service-card{
+    background:var(--white);
+    border-radius:var(--radius-md);
+    padding:36px 30px;
+    box-shadow:0 14px 34px -18px rgba(22,38,31,0.18);
+    transition:transform .2s ease, box-shadow .2s ease;
+    position:relative;
+    overflow:hidden;
+  }
+  .service-card:hover{transform:translateY(-6px); box-shadow:0 22px 44px -18px rgba(22,38,31,0.28);}
+  .service-icon{
+    width:64px; height:64px;
+    background:var(--floret);
+    border-radius:50% 50% 48% 52% / 55% 48% 52% 45%;
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:22px;
+  }
+  .service-card h3{font-size:21px; margin-bottom:10px;}
+  .service-card p{font-size:14.5px;}
+  .service-tag{
+    position:absolute; top:24px; right:24px;
+    font-family:'Space Mono',monospace; font-size:11px; color:var(--gray);
+  }
+
+  /* ---------- DIFERENCIAIS ---------- */
+  .diff{background:var(--cream);}
+  .diff-grid{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:56px;
+    align-items:center;
+  }
+  .diff-items{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+  .diff-item{display:flex; gap:14px;}
+  .diff-item .ic{
+    width:44px; height:44px; flex-shrink:0;
+    background:var(--white);
+    border:2px solid var(--ink);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .diff-item h4{font-family:'Fraunces',serif; font-size:16.5px; margin-bottom:4px; font-weight:600;}
+  .diff-item p{font-size:13.5px;}
+  .diff-visual{
+    background:var(--green);
+    border-radius:var(--radius-lg);
+    padding:0;
+    color:var(--cream);
+    position:relative;
+    overflow:hidden;
+    min-height:420px;
+    display:flex;
+    align-items:flex-end;
+  }
+  .diff-visual-photo{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    opacity:0.34;
+  }
+  .diff-visual-content{
+    position:relative; z-index:2; padding:40px;
+    background:linear-gradient(180deg, rgba(35,168,137,0) 0%, rgba(15,60,48,0.55) 55%, rgba(12,46,37,0.85) 100%);
+    width:100%;
+  }
+  .diff-visual .eyebrow{color:var(--mint);}
+  .diff-visual .eyebrow::before{background:var(--floret);}
+  .diff-visual h3{color:var(--white); font-size:26px; margin:16px 0 14px;}
+  .diff-visual p{color:#e3f3ee;}
+
+  /* ---------- GALERIA ---------- */
+  .gallery{background:var(--mint-tint);}
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+  .gallery-grid figure{
+    position:relative;
+    border-radius:16px;
+    overflow:hidden;
+    aspect-ratio:1/1;
+    margin:0;
+  }
+  .gallery-grid img{
+    width:100%; height:100%; object-fit:cover;
+    display:block;
+    transition:transform .35s ease;
+  }
+  .gallery-grid figure:hover img{transform:scale(1.06);}
+  .gallery-grid figcaption{
+    position:absolute; left:0; right:0; bottom:0;
+    padding:14px 16px 12px;
+    background:linear-gradient(180deg, rgba(22,38,31,0) 0%, rgba(22,38,31,0.75) 100%);
+    color:var(--white);
+    font-family:'Space Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:0.02em;
+  }
+
+  /* ---------- CLIENTES ---------- */
+  .clients{background:var(--white); padding:70px 0;}
+  .clients .section-head{margin-bottom:38px; text-align:center; max-width:100%;}
+  .clients .section-head h2{font-size:26px;}
+  .client-row{
+    display:flex; justify-content:center; align-items:center; gap:18px; flex-wrap:wrap;
+  }
+  .client-chip{
+    font-family:'Space Mono',monospace;
+    font-size:14px; font-weight:700;
+    padding:14px 26px;
+    border:2px solid var(--ink);
+    border-radius:100px;
+    color:var(--ink);
+  }
+  .client-chip.alt{background:var(--ink); color:var(--cream);}
+
+  /* ---------- DEPOIMENTOS ---------- */
+  .testimonials{background:var(--cream-deep);}
+  .test-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .test-card{
+    background:var(--white);
+    border-radius:var(--radius-md);
+    padding:32px 28px;
+    box-shadow:0 14px 30px -18px rgba(22,38,31,0.15);
+  }
+  .test-card .quote-mark{font-family:'Fraunces',serif; font-size:44px; color:var(--mint); line-height:0.5; display:block; margin-bottom:14px;}
+  .test-card p.quote{font-size:15px; font-style:italic; color:var(--ink-soft); margin-bottom:20px;}
+  .test-person{display:flex; align-items:center; gap:12px;}
+  .test-avatar{width:40px; height:40px; border-radius:50%; background:var(--green); color:var(--white); display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:700;}
+  .test-person b{font-size:14px; display:block;}
+  .test-person span{font-size:12px; color:var(--gray);}
+  .test-note{
+    margin-top:26px; font-size:12.5px; color:var(--gray); text-align:center;
+    font-family:'Space Mono',monospace;
+  }
+
+  /* ---------- CTA CONTATO ---------- */
+  .cta-band{
+    background:var(--ink);
+    border-radius:var(--radius-lg);
+    padding:56px 48px;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:32px; flex-wrap:wrap;
+    margin:0 32px;
+    max-width:calc(var(--container) - 64px);
+    margin-left:auto; margin-right:auto;
+  }
+  .cta-band h3{color:var(--white); font-size:clamp(24px,3vw,32px); max-width:480px;}
+  .cta-band p{color:#b9c4bf; margin-top:10px; max-width:440px;}
+  .cta-actions{display:flex; gap:14px; flex-wrap:wrap;}
+
+  /* ---------- CONTATO ---------- */
+  .contact{background:var(--cream); padding-top:80px; padding-bottom:70px;}
+  .contact-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:60px;
+  }
+  .contact-info-item{display:flex; gap:16px; margin-bottom:26px;}
+  .contact-info-item .ic{
+    width:46px; height:46px; flex-shrink:0;
+    background:var(--floret); border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .contact-info-item b{display:block; font-size:14.5px; margin-bottom:3px;}
+  .contact-info-item span, .contact-info-item a{font-size:14px; color:var(--ink-soft);}
+  .form{
+    background:var(--white); border-radius:var(--radius-lg); padding:38px;
+    box-shadow:var(--shadow);
+  }
+  .form h3{font-size:22px; margin-bottom:6px;}
+  .form p.hint{font-size:13.5px; margin-bottom:24px;}
+  .form-row{margin-bottom:18px;}
+  .form-row label{display:block; font-size:13px; font-weight:600; margin-bottom:6px;}
+  .form-row input, .form-row textarea, .form-row select{
+    width:100%; padding:13px 15px; border-radius:10px;
+    border:1.5px solid rgba(22,38,31,0.18); background:var(--cream);
+    font-family:'Inter',sans-serif; font-size:14.5px; color:var(--ink);
+  }
+  .form-row input:focus, .form-row textarea:focus, .form-row select:focus{
+    outline:2px solid var(--green); outline-offset:1px; border-color:var(--green);
+  }
+  .form button{width:100%; justify-content:center; margin-top:6px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink); color:var(--cream); padding:64px 0 26px; margin-top:0;}
+  .footer-grid{
+    display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px;
+    padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .footer-brand{display:flex; align-items:center; gap:10px; margin-bottom:14px;}
+  .footer-brand span{font-family:'Fraunces',serif; font-weight:700; font-size:19px; color:var(--white);}
+  .footer-brand img{width:34px; filter:brightness(0) invert(1);}
+  footer p{color:#a9b6b0; font-size:13.5px; max-width:280px;}
+  footer h5{font-family:'Space Mono',monospace; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--mint); margin-bottom:16px;}
+  footer ul li{margin-bottom:11px;}
+  footer ul a{color:#c7d1cb; font-size:14px; transition:color .15s;}
+  footer ul a:hover{color:var(--mint);}
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center; padding-top:24px;
+    font-size:12.5px; color:#8fa099; flex-wrap:wrap; gap:12px;
+  }
+  .social-ic{
+    width:38px; height:38px; border-radius:50%; border:1.5px solid rgba(255,255,255,0.25);
+    display:flex; align-items:center; justify-content:center;
+  }
+
+  /* ---------- WHATSAPP FLOAT ---------- */
+  .wa-float{
+    position:fixed; bottom:26px; right:26px; z-index:200;
+    width:60px; height:60px; border-radius:50%;
+    background:#25D366; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 14px 30px -8px rgba(0,0,0,0.35);
+    animation:pulse 2.6s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.06);}}
+  @media (prefers-reduced-motion: reduce){ .wa-float{animation:none;} }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:980px){
+    .hero-grid, .about-grid, .diff-grid, .contact-grid{grid-template-columns:1fr;}
+    .about-grid{gap:76px;}
+    .services-grid, .test-grid{grid-template-columns:1fr;}
+    .diff-items{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .stats .wrap{grid-template-columns:repeat(2,1fr); row-gap:28px;}
+    .footer-grid{grid-template-columns:1fr 1fr; row-gap:36px;}
+    .nav-links{display:none;}
+    .burger{display:block;}
+    .hero-art{margin-top:40px;}
+  }
+  @media (max-width:560px){
+    .footer-grid{grid-template-columns:1fr;}
+    .cta-band{flex-direction:column; align-items:flex-start; padding:40px 28px;}
+    .hero-badges{gap:18px;}
+    .wrap{padding:0 20px;}
+    .nav{padding:14px 20px;}
+    .nav-cta .btn-primary{display:none;}
+    .burger{display:none;}
+    .brand span{font-size:18px;}
+    .float-card{display:none;}
+    .hero-art{min-height:300px;}
+    .hero-logo-frame{width:250px; height:250px;}
+    .about-badge{width:92px; height:92px; left:-12px; bottom:-16px;}
+    .about-badge b{font-size:17px;}
+    .cta-band{margin:0 20px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="#top" class="brand">
+      <img src="assets/logo-icon.png" alt="Couve Flor">
+      <span>Couve Flor</span>
+    </a>
+    <div class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://wa.me/5532991333703" target="_blank" rel="noopener">Fale no WhatsApp</a>
+      <button class="burger" aria-label="Abrir menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#16261F" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Restaurante corporativo · Juiz de Fora, MG</span>
+        <h1>Comida de verdade,<br>todo dia na mesa <em>do seu time.</em></h1>
+        <p class="lead">Desde 2015 preparamos e entregamos refeições coletivas com o cuidado de quem cozinha para gente que conhece — para empresas de todos os portes em Juiz de Fora e região.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="https://wa.me/5532991333703" target="_blank" rel="noopener">
+            Solicitar orçamento
+          </a>
+          <a class="btn btn-outline" href="#servicos">Conheça os serviços</a>
+        </div>
+        <div class="hero-badges">
+          <div class="hero-badge">
+            <span class="num">2015</span>
+            <span class="lbl">Ano em que abrimos as portas</span>
+          </div>
+          <div class="hero-badge">
+            <span class="num">3x</span>
+            <span class="lbl">Refeições servidas por dia</span>
+          </div>
+          <div class="hero-badge">
+            <span class="num">MG</span>
+            <span class="lbl">Juiz de Fora e região</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="float-card c1"><span class="dot"></span> Cardápio feito na casa</div>
+        <div class="hero-logo-frame">
+          <img src="assets/logo-icon.png" alt="Couve Flor">
+        </div>
+        <div class="float-card c2"><span class="dot"></span> Entrega corporativa</div>
+      </div>
+    </div>
+    <svg class="scallop" viewBox="0 0 1200 40" preserveAspectRatio="none">
+      <path d="M0,40 L0,20 Q25,0 50,20 T100,20 T150,20 T200,20 T250,20 T300,20 T350,20 T400,20 T450,20 T500,20 T550,20 T600,20 T650,20 T700,20 T750,20 T800,20 T850,20 T900,20 T950,20 T1000,20 T1050,20 T1100,20 T1150,20 T1200,20 L1200,40 Z" fill="var(--ink)"/>
+    </svg>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="stats">
+    <div class="wrap">
+      <div class="stat">
+        <div class="n">2015</div>
+        <div class="l">Fundação da Couve Flor</div>
+      </div>
+      <div class="stat">
+        <div class="n">3x</div>
+        <div class="l">Refeições ao dia</div>
+      </div>
+      <div class="stat">
+        <div class="n">100%</div>
+        <div class="l">Cardápio preparado na casa</div>
+      </div>
+      <div class="stat">
+        <div class="n">JF · MG</div>
+        <div class="l">Atendimento regional</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOBRE ================= -->
+  <section class="section about" id="sobre">
+    <div class="wrap about-grid">
+      <div class="about-art">
+        <div class="scallop-frame photo-frame">
+          <img src="assets/photos/about-team.jpg" alt="Equipe Couve Flor em frente ao restaurante">
+        </div>
+        <div class="about-badge">
+          <b>10+</b>
+          <span>ANOS DE COZINHA</span>
+        </div>
+      </div>
+      <div class="about-body">
+        <span class="eyebrow">Nossa história</span>
+        <h2>Uma cozinha que virou parceira de empresas inteiras</h2>
+        <p>Fundada em 2015 em Juiz de Fora, a Couve Flor nasceu para mudar a forma como as pessoas comem durante o expediente. Não é só entregar comida — é montar um cardápio pensado, preparar com atenção e garantir que cada colaborador tenha uma refeição de qualidade, todos os dias.</p>
+        <p>Hoje atendemos empresas de diferentes portes e segmentos, do desjejum ao jantar, com o mesmo cuidado artesanal do primeiro dia.</p>
+        <ul class="about-list">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#56f5d0"/><path d="M8 12.5l2.5 2.5L16 9" stroke="#16261F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Cardápio balanceado e elaborado com cuidado
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#56f5d0"/><path d="M8 12.5l2.5 2.5L16 9" stroke="#16261F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Equipe própria, treinada e presente na operação
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#56f5d0"/><path d="M8 12.5l2.5 2.5L16 9" stroke="#16261F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Atendimento próximo, empresa por empresa
+          </li>
+        </ul>
+        <a class="btn btn-outline" href="#contato">Fale com a nossa equipe</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICOS ================= -->
+  <section class="section services" id="servicos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">O que fazemos</span>
+        <h2>Serviços pensados para o ritmo da sua empresa</h2>
+        <p>Da manhã à noite, cuidamos da alimentação para que sua equipe só precise se preocupar com o trabalho.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-tag">01</span>
+          <div class="service-icon">
+            <svg width="30" height="30" viewBox="0 0 40 40" fill="none"><path d="M8 22c0-8 5-14 12-14s12 6 12 14" stroke="#16261F" stroke-width="2" stroke-linecap="round"/><path d="M6 22h28l-2 8H8l-2-8z" stroke="#16261F" stroke-width="2" stroke-linejoin="round" fill="#f5641b" fill-opacity="0.15"/><path d="M20 8V5" stroke="#16261F" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Desjejum, almoço e jantar</h3>
+          <p>Servimos as três refeições do dia para nossos parceiros e contratados, com o carinho e a dedicação que só a equipe Couve Flor entrega.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-tag">02</span>
+          <div class="service-icon">
+            <svg width="30" height="30" viewBox="0 0 40 40" fill="none"><rect x="7" y="14" width="26" height="20" rx="3" stroke="#16261F" stroke-width="2" fill="#56f5d0" fill-opacity="0.2"/><path d="M7 21h26" stroke="#16261F" stroke-width="2"/><path d="M14 14v-3a2 2 0 012-2h8a2 2 0 012 2v3" stroke="#16261F" stroke-width="2"/></svg>
+          </div>
+          <h3>Marmitex</h3>
+          <p>Ingredientes selecionados e o sabor que só a Couve Flor tem. Cardápio do dia sempre disponível para consulta.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-tag">03</span>
+          <div class="service-icon">
+            <svg width="30" height="30" viewBox="0 0 40 40" fill="none"><rect x="4" y="16" width="18" height="12" rx="2" stroke="#16261F" stroke-width="2" fill="#f5641b" fill-opacity="0.15"/><path d="M22 20h6l6 5v3h-12v-8z" stroke="#16261F" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="30" r="2.4" stroke="#16261F" stroke-width="2" fill="#fbf7ea"/><circle cx="28" cy="30" r="2.4" stroke="#16261F" stroke-width="2" fill="#fbf7ea"/></svg>
+          </div>
+          <h3>Entregas corporativas</h3>
+          <p>Entrega por marmitex ou distribuição direto na rampa da empresa parceira. Logística sob medida para cada operação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DIFERENCIAIS ================= -->
+  <section class="section diff">
+    <div class="wrap diff-grid">
+      <div class="diff-items">
+        <div class="diff-item">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="#16261F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div>
+            <h4>Qualidade constante</h4>
+            <p>Padrão de sabor e higiene mantido em toda a operação, todos os dias.</p>
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3v6l4 2" stroke="#16261F" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#16261F" stroke-width="2"/></svg></div>
+          <div>
+            <h4>Pontualidade</h4>
+            <p>Horários combinados com a sua empresa e cumpridos à risca.</p>
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12c3-6 7-9 9-9s6 3 9 9c-3 6-7 9-9 9s-6-3-9-9z" stroke="#16261F" stroke-width="2"/><circle cx="12" cy="12" r="2.6" stroke="#16261F" stroke-width="2"/></svg></div>
+          <div>
+            <h4>Atendimento próximo</h4>
+            <p>Um canal direto com a diretoria, sem burocracia para resolver o que precisar.</p>
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-9C.5 7.5 3 4 6.5 4 9 4 11 6 12 7c1-1 3-3 5.5-3 3.5 0 6 3.5 4 8-2.5 4.65-9.5 9-9.5 9z" stroke="#16261F" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <div>
+            <h4>Feito com cuidado</h4>
+            <p>Cada prato pensado como se fosse para a nossa própria equipe.</p>
+          </div>
+        </div>
+      </div>
+      <div class="diff-visual">
+        <img class="diff-visual-photo" src="assets/photos/diff-quality.jpg" alt="Controle de temperatura dos alimentos na Couve Flor">
+        <div class="diff-visual-content">
+          <span class="eyebrow">Por que Couve Flor</span>
+          <h3>Menos operação para você pensar, mais gente bem alimentada.</h3>
+          <p>Cuidamos de compras, preparo, entrega e reposição — sua empresa só sente o resultado: um time satisfeito e produtivo. Toda refeição passa por controle de temperatura antes de servir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALERIA ================= -->
+  <section class="section gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">No dia a dia</span>
+        <h2>Nossa cozinha em ação</h2>
+        <p>Do preparo ao prato servido — bastidores reais da operação Couve Flor.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure><img src="assets/photos/gallery-1.jpg" alt="Refeição servida no prato"><figcaption>Refeição pronta para servir</figcaption></figure>
+        <figure><img src="assets/photos/gallery-2.jpg" alt="Colaborador Mercado Livre sendo servido"><figcaption>Atendimento no cliente</figcaption></figure>
+        <figure><img src="assets/photos/gallery-3.jpg" alt="Controle de temperatura dos alimentos"><figcaption>Controle de qualidade</figcaption></figure>
+        <figure><img src="assets/photos/gallery-4.jpg" alt="Embalagem de refeição para entrega"><figcaption>Preparo para entrega</figcaption></figure>
+        <figure><img src="assets/photos/gallery-5.jpg" alt="Preparo na cozinha Couve Flor"><figcaption>Cozinha em preparo</figcaption></figure>
+        <figure><img src="assets/photos/gallery-6.jpg" alt="Refeitório da empresa parceira"><figcaption>Refeitório da empresa parceira</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CLIENTES ================= -->
+  <section class="clients" id="clientes">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Quem confia na Couve Flor</span>
+        <h2>Empresas que já são parceiras</h2>
+      </div>
+      <div class="client-row">
+        <span class="client-chip alt">Mercado Livre</span>
+        <span class="client-chip">Tupperware</span>
+        <span class="client-chip alt">Granvita</span>
+        <span class="client-chip">Cliente Comum</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DEPOIMENTOS ================= -->
+  <section class="section testimonials" id="depoimentos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Depoimentos</span>
+        <h2>O que dizem sobre a Couve Flor</h2>
+      </div>
+      <div class="test-grid">
+        <div class="test-card">
+          <span class="quote-mark">"</span>
+          <p class="quote">Espaço reservado para um depoimento real de cliente — me envie a avaliação e eu insiro aqui.</p>
+          <div class="test-person">
+            <div class="test-avatar">C</div>
+            <div><b>Nome do cliente</b><span>Empresa parceira</span></div>
+          </div>
+        </div>
+        <div class="test-card">
+          <span class="quote-mark">"</span>
+          <p class="quote">Espaço reservado para um depoimento real de cliente — me envie a avaliação e eu insiro aqui.</p>
+          <div class="test-person">
+            <div class="test-avatar">C</div>
+            <div><b>Nome do cliente</b><span>Empresa parceira</span></div>
+          </div>
+        </div>
+        <div class="test-card">
+          <span class="quote-mark">"</span>
+          <p class="quote">Espaço reservado para um depoimento real de cliente — me envie a avaliação e eu insiro aqui.</p>
+          <div class="test-person">
+            <div class="test-avatar">C</div>
+            <div><b>Nome do cliente</b><span>Empresa parceira</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="test-note">* Depoimentos ilustrativos — serão substituídos por avaliações reais de clientes.</p>
+    </div>
+  </section>
+
+  <!-- ================= CTA BAND ================= -->
+  <div class="cta-band">
+    <div>
+      <h3>Pronto para levar a Couve Flor para dentro da sua empresa?</h3>
+      <p>Fale agora com a nossa equipe e monte um plano de alimentação sob medida para o seu time.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-primary" href="https://wa.me/5532991333703" target="_blank" rel="noopener">Solicitar orçamento</a>
+      <a class="btn" style="background:var(--cream);color:var(--ink);" href="#contato">Ver contato</a>
+    </div>
+  </div>
+
+  <!-- ================= CONTATO ================= -->
+  <section class="section contact" id="contato">
+    <div class="wrap contact-grid">
+      <div>
+        <span class="eyebrow">Contato</span>
+        <h2>Vamos conversar sobre a alimentação da sua empresa</h2>
+        <p style="margin-bottom:32px;">Atendemos empresas de todos os portes em Juiz de Fora e região. Fale com a gente pelo canal que preferir.</p>
+
+        <div class="contact-info-item">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-11a7 7 0 0114 0c0 6.5-7 11-7 11z" stroke="#16261F" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" stroke="#16261F" stroke-width="1.8"/></svg></div>
+          <div><b>Endereço</b><span>BR-040, 783 — Juiz de Fora, MG, Brasil</span></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z" stroke="#16261F" stroke-width="1.8"/></svg></div>
+          <div><b>Telefone / WhatsApp</b><a href="tel:+5532991333703">(32) 99133-3703</a></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#16261F" stroke-width="1.8"/><path d="M3 7l9 6 9-6" stroke="#16261F" stroke-width="1.8"/></svg></div>
+          <div><b>E-mail</b><a href="mailto:diretoria@couveflorrefeicoes.com.br">diretoria@couveflorrefeicoes.com.br</a></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="#16261F" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="#16261F" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="#16261F"/></svg></div>
+          <div><b>Instagram</b><a href="https://www.instagram.com/couveflorrefeicoes/" target="_blank" rel="noopener">@couveflorrefeicoes</a></div>
+        </div>
+      </div>
+
+      <div class="form">
+        <h3>Peça um orçamento</h3>
+        <p class="hint">Preencha os dados e nossa equipe retorna em até 1 dia útil.</p>
+        <div class="form-row">
+          <label for="nome">Nome</label>
+          <input id="nome" type="text" placeholder="Seu nome completo">
+        </div>
+        <div class="form-row">
+          <label for="empresa">Empresa</label>
+          <input id="empresa" type="text" placeholder="Nome da empresa">
+        </div>
+        <div class="form-row">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" placeholder="voce@empresa.com.br">
+        </div>
+        <div class="form-row">
+          <label for="msg">Mensagem</label>
+          <textarea id="msg" rows="4" placeholder="Conte um pouco sobre o que sua empresa precisa"></textarea>
+        </div>
+        <button class="btn btn-primary" type="button" onclick="alert('Formulário de demonstração — será conectado ao Wix Forms na versão final.')">Enviar mensagem</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo-icon.png" alt="Couve Flor">
+          <span>Couve Flor</span>
+        </div>
+        <p>Restaurante corporativo em Juiz de Fora — MG. Refeições preparadas com cuidado, desde 2015.</p>
+      </div>
+      <div>
+        <h5>Navegação</h5>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#clientes">Clientes</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Serviços</h5>
+        <ul>
+          <li><a href="#servicos">Desjejum, almoço e jantar</a></li>
+          <li><a href="#servicos">Marmitex</a></li>
+          <li><a href="#servicos">Entregas corporativas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <ul>
+          <li><a href="tel:+5532991333703">(32) 99133-3703</a></li>
+          <li><a href="mailto:diretoria@couveflorrefeicoes.com.br">diretoria@couveflorrefeicoes.com.br</a></li>
+          <li><a href="https://www.instagram.com/couveflorrefeicoes/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Couve Flor. Todos os direitos reservados.</span>
+      <a class="social-ic" href="https://www.instagram.com/couveflorrefeicoes/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fbf7ea" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="#fbf7ea" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1" fill="#fbf7ea"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5532991333703" target="_blank" rel="noopener" aria-label="Fale no WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3z"/><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2z" stroke="white" stroke-width="0" opacity="0"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5-1.3c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 013.8 12c0-4.5 3.7-8.2 8.2-8.2s8.2 3.7 8.2 8.2-3.7 8.2-8.2 8.2z"/></svg>
+</a>
+
+</body>
+</html>
