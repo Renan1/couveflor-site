@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://couveflorrefeicoes.com.br/sitemap.xml
